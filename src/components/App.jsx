@@ -50,26 +50,32 @@ import css from "./App.module.css";
 import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
 import Filter from "components/Filter/Filter";
+import contactslist from "components/contactslist.json";
 // import { Provider } from "react-redux"; // Ensure you import Provider
 // import store from "../redux/store"; // Import your Redux store
 
 const App = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector((state) => state.contacts.contacts);
-  const filter = useSelector((state) => state.filter.filter);
+  const contacts = useSelector((state) => state.contacts);
+  const filter = useSelector((state) => state.filter);
 
   const valueLocalStorage = JSON.parse(localStorage.getItem("contacts"));
 
-  // useEffect(() => {
-  //   if (valueLocalStorage && valueLocalStorage.length > 0) {
-  //     dispatch(setContacts(valueLocalStorage));
-  //   }
-  // }, [dispatch, valueLocalStorage]);
+  useEffect(() => {
+    if (valueLocalStorage && valueLocalStorage.length > 0) {
+      dispatch(setContacts(valueLocalStorage));
+    }
+  }, [dispatch, valueLocalStorage]);
+
+  useEffect(() => {
+    if (valueLocalStorage && valueLocalStorage.length === 0) {
+      dispatch(setContacts(valueLocalStorage));
+    }
+  }, [dispatch, valueLocalStorage]);
 
   useEffect(() => {
     localStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
-
   const handleFilter = ({ target: { value } }) => {
     dispatch(setFilter(value));
   };

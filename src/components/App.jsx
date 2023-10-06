@@ -50,7 +50,7 @@ import css from "./App.module.css";
 import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
 import Filter from "components/Filter/Filter";
-import contactslist from "components/contactslist.json";
+// import contactslist from "components/contactslist.json";
 // import { Provider } from "react-redux"; // Ensure you import Provider
 // import store from "../redux/store"; // Import your Redux store
 

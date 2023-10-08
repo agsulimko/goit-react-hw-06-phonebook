@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-// combineReducers,
+
 import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
 import storage from 'redux-persist/lib/storage';
@@ -37,6 +37,7 @@ export const store = configureStore({
       },
     }),
 });
+export const persistor = persistStore(store);
 //
 // import { filterReducer } from './filterSlice';
 // import {
@@ -74,5 +75,3 @@ export const store = configureStore({
 //       },
 //     }),
 // });
-
-export const persistor = persistStore(store);

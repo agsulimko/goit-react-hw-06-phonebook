@@ -26,37 +26,3 @@ const Filter = (e) => {
 };
 
 export default Filter;
-
-// ====================================
-// import React from "react";
-
-// import css from "./Filter.module.css";
-// import { useDispatch, useSelector } from "react-redux";
-// import { selectFilter } from "redux/selectors";
-// import { setFilter } from "redux/filterSlice";
-
-// const Filter = (e) => {
-//   const { filter } = useSelector(setFilter);
-//   const dispatch = useDispatch();
-
-//   const handleFilterChange = ({ target: { value } }) => {
-//     dispatch(selectFilter(value));
-//   };
-
-//   return (
-//     <div className={css.labelDiv}>
-//       <label className={css.label}>Find contacts by name</label>
-//       <input
-//         className={css.input}
-//         type="text"
-//         value={filter}
-//         onChange={handleFilterChange}
-//         name="filterQuery"
-//         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-//         placeholder="Search contacts..."
-//       />
-//     </div>
-//   );
-// };
-
-// export default Filter;

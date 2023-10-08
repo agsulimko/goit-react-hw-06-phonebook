@@ -14,11 +14,6 @@ const filterSlice = createSlice({
     setFilter(state, action) {
       state.filter = action.payload;
     },
-    // setFilter: {
-    //   reducer(_, action) {
-    //     return { filter: action.payload };
-    //   },
-    // },
   },
 });
 

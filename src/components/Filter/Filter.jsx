@@ -15,7 +15,7 @@ const Filter = (e) => {
       <input
         className={css.input}
         type="text"
-        // value={filter}
+        //  value={filter}
         onChange={handleFilterChange}
         name="filterQuery"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"

@@ -21,11 +21,6 @@ const reducer = (state, action) => {
 };
 
 const ContactForm = () => {
-  // const valueLocalStorage = JSON.parse(localStorage.getItem("contacts"));
-
-  // const [contacts, setContacts] = useState(
-  //   valueLocalStorage.length > 0 ? valueLocalStorage : contactslist
-  // );
   const dispatchToredux = useDispatch();
   const [state, dispatch] = useReducer(reducer, initialState);
 

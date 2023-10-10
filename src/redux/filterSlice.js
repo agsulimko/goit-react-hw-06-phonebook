@@ -7,17 +7,6 @@ export const filterSlice = createSlice({
     setFilter: (_, action) => {
       return action.payload;
     },
-    //   setFilter: {
-    //     // reducer(_, action) {
-    //     //   return { filter: action.payload };
-    //     // },
-    //     // setFilter: (_, action) => {
-    //     //   return action.payload;
-    //     // },
-    //     // setFilter(state, action) {
-    //     //   state.filter = action.payload;
-    //     // },
-    //   },
   },
 });
 

@@ -5,6 +5,10 @@ export const contactssSlice = createSlice({
   initialState: contactslist,
   reducers: {
     createContacts: (state, action) => {
+      // console.log(action);
+      // console.log(state);
+      // console.log(action.payload);
+
       state.push(action.payload);
     },
     deleteContacts: (state, action) => {

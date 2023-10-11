@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-
+//якщо треба локалсторадж
 import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
 import storage from 'redux-persist/lib/storage';
@@ -38,3 +38,11 @@ export const store = configureStore({
     }),
 });
 export const persistor = persistStore(store);
+
+//якщо без локалсторадж і персіст
+// export const store = configureStore({
+//     reducer: {
+//         contacts: contactsReducer,
+//         filter: filterReducer,
+//     },
+// });
